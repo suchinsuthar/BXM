@@ -13,7 +13,7 @@ Blind XSS Manager, That keeps all the blind xss payloads to use directly from br
 
 1. Clone
 ```
-git clone https://github.com/SeifElsallamy/Blind-XSS-Manager.git
+git clone https://github.com/suchinsuthar/BXM.git
 ```
 2. Open chrome browser:
 3. Go to `chrome://extensions/` and check the box for Developer mode in the top right.
