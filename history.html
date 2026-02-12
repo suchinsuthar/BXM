@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>History - Blind XSS Manager</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="background.js"></script>
+    <script src="history.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>History</h2>
+            <a href="popup.html" id="backButton" class="btn btn-secondary">Back</a>
+        </div>
+        
+        <textarea id="textArea" class="history-textarea" spellcheck="false" readonly></textarea>
+        
+        <div class="actions-row">
+            <button id="clear" class="btn btn-danger">Clear History</button>
+        </div>
+    </div>
+</body>
+</html>

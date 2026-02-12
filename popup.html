@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blind XSS Manager</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="background.js"></script>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Blind XSS Manager</h2>
+            <a href="history.html" id="history" class="btn btn-secondary">History</a>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group flex-grow">
+                <label for="domain">Domain:</label>
+                <div style="display: flex; gap: 8px;">
+                    <input type="text" id="domain" name="domain" placeholder="Eg: *.xss.ht">
+                    <button id="saveDomainButton" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group flex-grow">
+                <label for="current-url">Current URL:</label>
+                <input type="text" id="current-url" name="current-url">
+            </div>
+            <div class="form-group" style="width: 80px;">
+                <label for="nonce">Hash:</label>
+                <input type="text" id="nonce" name="nonce" disabled>
+            </div>
+        </div>
+
+        <div class="payloads-section">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label>Payloads:</label>
+                <button id="encodeButton" class="btn btn-secondary" style="padding: 4px 8px; font-size: 11px;">Encode</button>
+            </div>
+            
+            <div class="payload-list">
+                <!-- Payload 0 -->
+                <div class="payload-label">Import:</div>
+                <input type="text" id="payload0" name="payload0" readonly>
+                <button type="button" id="copy0" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 1 -->
+                <div class="payload-label">Script:</div>
+                <input type="text" id="payload1" name="payload1" readonly>
+                <button type="button" id="copy1" class="btn btn-copy">Copy</button>
+
+				<!-- Payload 10 (Mixed) -->
+                <div class="payload-label">Mixed:</div>
+                <input type="text" id="payload10" name="payload10" readonly>
+                <button type="button" id="copy10" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 11 (Input M) -->
+                <div class="payload-label">Input M:</div>
+                <input type="text" id="payload11" name="payload11" readonly>
+                <button type="button" id="copy11" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 12 (Obfuscated) -->
+                <div class="payload-label">Obfuscated:</div>
+                <input type="text" id="payload12" name="payload12" readonly>
+                <button type="button" id="copy12" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 3 -->
+                <div class="payload-label">Input:</div>
+                <input type="text" id="payload3" name="payload3" readonly>
+                <button type="button" id="copy3" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 4 -->
+                <div class="payload-label">Img:</div>
+                <input type="text" id="payload4" name="payload4" readonly>
+                <button type="button" id="copy4" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 9 (Polyglot) -->
+                <div class="payload-label">Polyglot:</div>
+                <input type="text" id="payload9" name="payload9" readonly>
+                <button type="button" id="copy9" class="btn btn-copy">Copy</button>
+
+				<!-- Payload 13 (Polyglot 2) -->
+                <div class="payload-label">Polyglot 2:</div>
+                <input type="text" id="payload13" name="payload13" readonly>
+                <button type="button" id="copy13" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 5 -->
+                <div class="payload-label">Video:</div>
+                <input type="text" id="payload5" name="payload5" readonly>
+                <button type="button" id="copy5" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 6 -->
+                <div class="payload-label">IFrame:</div>
+                <input type="text" id="payload6" name="payload6" readonly>
+                <button type="button" id="copy6" class="btn btn-copy">Copy</button>
+
+				<!-- Payload 2 -->
+                <div class="payload-label">JS-URI:</div>
+                <input type="text" id="payload2" name="payload2" readonly>
+                <button type="button" id="copy2" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 7 -->
+                <div class="payload-label">XMLHTTP:</div>
+                <input type="text" id="payload7" name="payload7" readonly>
+                <button type="button" id="copy7" class="btn btn-copy">Copy</button>
+
+                <!-- Payload 8 -->
+                <div class="payload-label">JQuery:</div>
+                <input type="text" id="payload8" name="payload8" readonly>
+                <button type="button" id="copy8" class="btn btn-copy">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="message" class="message">
+        <p>Saved to History</p>
+    </div>
+</body>
+</html>
